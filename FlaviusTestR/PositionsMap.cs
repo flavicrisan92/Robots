@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FlaviusTestR
 {
-    public class PositionsMap
+    public sealed class PositionsMap
     {
-        public Dictionary<string, int> OrientationToNumber = new Dictionary<string, int>
+        private static readonly Lazy<PositionsMap> lazy = 
+            new Lazy<PositionsMap>(() => new PositionsMap());
+
+        public static PositionsMap Instance
+        {
+            get
+            {
+                return lazy.Value;
+            }
+        }
+
+        public static Dictionary<string, int> OrientationToNumber = new Dictionary<string, int>
             {
                 { "N", 0 },
                 { "E", 1 },
@@ -16,7 +24,7 @@ namespace FlaviusTestR
                 { "V", 3 }
             };
 
-        public Dictionary<int, string> NumberToOrientation = new Dictionary<int, string>
+        public static Dictionary<int, string> NumberToOrientation = new Dictionary<int, string>
             {
                 { 0, "N" },
                 { 1, "E" },

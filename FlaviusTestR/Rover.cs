@@ -7,11 +7,9 @@ namespace FlaviusTestR
         private int Orientation { get; set; }
         private int X { get; set; }
         private int Y { get; set; }
-        private PositionsMap Positions { get; set; }
         
-        public Rover(int x, int y, int firstOrientation, PositionsMap positions)
+        public Rover(int x, int y, int firstOrientation)
         {
-            Positions = positions;
             Orientation = firstOrientation;
             X = x;
             Y = y;
@@ -112,7 +110,7 @@ namespace FlaviusTestR
             {
                 Console.WriteLine(string.Format("Rover: {0}", roverName));
             }
-            Console.WriteLine(string.Format("Position: X={0}, Y={1}, Orienation={2}", X, Y, Positions.NumberToOrientation[Orientation]));
+            Console.WriteLine(string.Format("Position: X={0}, Y={1}, Orienation={2}", X, Y, PositionsMap.NumberToOrientation[Orientation]));
         }
     }
 }
