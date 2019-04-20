@@ -42,7 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
     <Compile Include="IRover.cs" />
+    <Compile Include="Commands\R.cs" />
+    <Compile Include="Commands\L.cs" />
+    <Compile Include="Commands\M.cs" />
+    <Compile Include="Helpers\ObjectToDictionaryHelper.cs" />
     <Compile Include="PositionsMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
