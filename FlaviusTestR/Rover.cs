@@ -5,13 +5,13 @@ namespace FlaviusTestR
 {
     public class Rover : IRover
     {
-        private int Orientation { get; set; }
         private int X { get; set; }
         private int Y { get; set; }
+        private int Orientation { get; set; }
 
-        public Rover(int x, int y, int firstOrientation)
+        public Rover(int x, int y, int orientation)
         {
-            Orientation = firstOrientation;
+            Orientation = orientation;
             X = x;
             Y = y;
         }
