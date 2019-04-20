@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace FlaviusTestR.Commands
 {
-    public class L: ICommand
+    public class L : Command
     {
-        public Dictionary<string, int> CalculateOrientation(int X, int Y, int Orientation)
+        public override Dictionary<string, int> CalculateOrientation(int X, int Y, int Orientation)
         {
             var result = new Dictionary<string, int>();
             if (Orientation == 0)
@@ -20,11 +16,7 @@ namespace FlaviusTestR.Commands
                 Orientation--;
             }
 
-            result.Add("X", X);
-            result.Add("Y", Y);
-            result.Add("Orientation", Orientation);
-            return result;
-
+            return GetResult(X, Y, Orientation);
         }
     }
 }

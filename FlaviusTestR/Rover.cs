@@ -36,7 +36,6 @@ namespace FlaviusTestR
                     Orientation = values["Orientation"];
                 }
             }
-
             ShowPosition(roverName);
         }
 
