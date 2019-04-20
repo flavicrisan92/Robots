@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FlaviusTestR.Commands
 {
-    public class L: Command
+    public class L: ICommand
     {
-        public override Dictionary<string, int> CalculateOrientation(int X, int Y, int Orientation)
+        public Dictionary<string, int> CalculateOrientation(int X, int Y, int Orientation)
         {
             var result = new Dictionary<string, int>();
             if (Orientation == 0)

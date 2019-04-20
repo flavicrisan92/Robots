@@ -5,6 +5,6 @@
         int GetX();
         int GetY();
         int GetOrientation();
-        void ExecuteInstructions(string roverName, string instructions);         
+        void ExecuteCommands(string roverName, string instructions);         
     }
 }

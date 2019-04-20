@@ -17,7 +17,7 @@ namespace UnitTestProject1
             Rover = new Rover(1, 2, firstOrietation);
 
             //Act
-            Rover.ExecuteInstructions("R1", "L");
+            Rover.ExecuteCommands("R1", "L");
 
             //Asser
             Assert.AreEqual(Rover.GetOrientation(), 3);
@@ -31,7 +31,7 @@ namespace UnitTestProject1
             Rover = new Rover(1, 2, firstOrietation);
 
             //Act
-            Rover.ExecuteInstructions("R1","R");
+            Rover.ExecuteCommands("R1","R");
 
             //Asser
             Assert.AreEqual(Rover.GetOrientation(), 1);
@@ -45,7 +45,7 @@ namespace UnitTestProject1
             Rover = new Rover(1, 2, firstOrietation);
 
             //Act
-            Rover.ExecuteInstructions("R1", "M");
+            Rover.ExecuteCommands("R1", "M");
 
             //Asser
             Assert.AreEqual(Rover.GetY(), 3);
@@ -59,7 +59,7 @@ namespace UnitTestProject1
             Rover = new Rover(1, 2, firstOrietation);
 
             //Act
-            Rover.ExecuteInstructions("R1", "M");
+            Rover.ExecuteCommands("R1", "M");
 
             //Asser
             Assert.AreEqual(Rover.GetX(), 2);
@@ -73,7 +73,7 @@ namespace UnitTestProject1
             Rover = new Rover(1, 2, firstOrietation);
 
             //Act
-            Rover.ExecuteInstructions("R1", "L");
+            Rover.ExecuteCommands("R1", "L");
 
             //Asser
             Assert.AreEqual(Rover.GetOrientation(), 3);
@@ -87,7 +87,7 @@ namespace UnitTestProject1
             Rover = new Rover(1, 2, firstOrietation);
 
             //Act
-            Rover.ExecuteInstructions("R1", "R");
+            Rover.ExecuteCommands("R1", "R");
 
             //Asser
             Assert.AreEqual(Rover.GetOrientation(), 0);
@@ -103,8 +103,8 @@ namespace UnitTestProject1
             var rover2 = new Rover(3, 3, rover2Orietation);
 
             //Act
-            rover1.ExecuteInstructions("R1", "LMLMLMLMM");
-            rover2.ExecuteInstructions("R2", "MMRMMRMRRM");
+            rover1.ExecuteCommands("R1", "LMLMLMLMM");
+            rover2.ExecuteCommands("R2", "MMRMMRMRRM");
 
             //Asser
             Assert.AreEqual(rover1.GetX(), 1);

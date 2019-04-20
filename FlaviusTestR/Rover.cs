@@ -16,7 +16,7 @@ namespace FlaviusTestR
             Y = y;
         }
 
-        public void ExecuteInstructions(string roverName, string instructions)
+        public void ExecuteCommands(string roverName, string instructions)
         {
             var chars = instructions.ToCharArray();
             foreach (var character in chars)
@@ -25,14 +25,12 @@ namespace FlaviusTestR
                 Type type = Type.GetType(command);
                 if (type != null)
                 {
-
                     var commandInstance = Activator.CreateInstance(type);
                     var toInvoke = type.GetMethod("CalculateOrientation");
                     object[] parmas = new object[3] { X, Y, Orientation };
                     var result = toInvoke.Invoke(commandInstance, parmas);
 
                     var values = (Dictionary<string, int>)result;
-
                     X = values["X"];
                     Y = values["Y"];
                     Orientation = values["Orientation"];

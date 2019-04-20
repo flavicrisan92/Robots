@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ICommand.cs" />
     <Compile Include="IRover.cs" />
     <Compile Include="Commands\R.cs" />
     <Compile Include="Commands\L.cs" />
