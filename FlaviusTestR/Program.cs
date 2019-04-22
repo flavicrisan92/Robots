@@ -1,4 +1,6 @@
+using FlaviusTestR.Implementation;
 using System;
+
 
 namespace FlaviusTestR
 {
@@ -9,8 +11,8 @@ namespace FlaviusTestR
             var orientationRover1 = PositionsMap.OrientationToNumber["N"];
             var orientationRover2 = PositionsMap.OrientationToNumber["E"];
 
-            IRover rover1 = new Rover(1, 2, orientationRover1);
-            IRover rover2 = new Rover(3, 3, orientationRover2);
+            var rover1 = new Rover(1, 2, orientationRover1);
+            var rover2 = new Rover(3, 3, orientationRover2);
 
             rover1.ExecuteCommands("rover1", "1LMLMLMLMM");
             rover2.ExecuteCommands("rover2", "MMRMMRMRRM");

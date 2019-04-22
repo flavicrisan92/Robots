@@ -43,7 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="IRover.cs" />
+    <Compile Include="Implementation\CommandFactory.cs" />
+    <Compile Include="Implementation\IRover.cs" />
     <Compile Include="Commands\R.cs" />
     <Compile Include="Commands\L.cs" />
     <Compile Include="Commands\M.cs" />
@@ -51,7 +52,7 @@
     <Compile Include="PositionsMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rover.cs" />
+    <Compile Include="Implementation\Rover.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

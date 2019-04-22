@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FlaviusTestR
+namespace FlaviusTestR.Implementation
 {
     public class Rover : IRover
     {
@@ -21,6 +21,11 @@ namespace FlaviusTestR
             var chars = instructions.ToCharArray();
             foreach (var character in chars)
             {
+                var commandToDo = CommandFactory.Build(character.ToString());
+                if (commandToDo != null) {
+                    var myValues = commandToDo.CalculateOrientation(X, Y, Orientation);
+                }
+                // OR
                 var command = string.Format("FlaviusTestR.Commands.{0}", character.ToString());
                 Type type = Type.GetType(command);
                 if (type != null)
